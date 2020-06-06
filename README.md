@@ -79,8 +79,8 @@
 
 - ローカルではsqlite, HerokuではPostgresを使う。<br>
 database.pyの以下の文が制御している。<br><br>
-*engine = create_engine(os.environ.get('DATABASE_URL') or 'sqlite:///' + databese_file, convert_unicode=True , echo=True)<br>*
---> 意味：エンジンとして環境変数のDATABASE_URLに指定されているものを使います。環境変数がなければ、sqlite://以下のURLにあるDBファイルを使います。<br><br>
+*engine = create_engine(os.environ.get('DATABASE_URL') or 'sqlite:///' + databese_file, convert_unicode=True , echo=True)*<br><br>
+--> 意味：エンジンとして環境変数のDATABASE_URLに指定されているものを使います。環境変数がなければ、sqlite://以下のURLにあるDBファイルを使います。<br>
          Herokuでは前者、ローカルでは後者が適用される<br>
 
 - models.py
