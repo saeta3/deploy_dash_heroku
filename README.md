@@ -58,10 +58,10 @@
   bash> heroku run pyton
 
 15. このアプリのために記述した、データベース初期化関数を走らせる
-  >bash>python) from assets.database import init_db
-  >bash>python) from assets.database import read_data
-  >bash>python) init_db()
-  >bash>python) read_data()
+  >bash>python) from assets.database import init_db<br>
+  >bash>python) from assets.database import read_data<br>
+  >bash>python) init_db()<br>
+  >bash>python) read_data()<br>
 
 16. Pythonとシェルを抜けローカルに舞い戻る
   >bash>python) exit()
