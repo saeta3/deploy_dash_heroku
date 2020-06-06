@@ -48,12 +48,14 @@
 該当アプリケーションのResources --> Add-onsでheroku postgres検索 --> Hobby Devを選択してProvisionをクリック
 
 12. データベースの接続情報は、HerokuのWe画面化<br>
-  >heroku pg:credentials:url<br>
-　で確認。この情報でSQLツールから接続できる
+  >heroku pg:credentials:url
+
+で確認。この情報でSQLツールから接続できる
 
 13. Herokuのシェルに入る
-  >heroku run bash<br>
-  --> ls -laとかpip freezeとかできるのでお試しあれ
+  >heroku run bash
+
+--> ls -laとかpip freezeとかできるのでお試しあれ
 
 14. Python起動
   bash> heroku run pyton
