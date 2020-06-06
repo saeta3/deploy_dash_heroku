@@ -43,7 +43,7 @@
   >git commit -m "added a line"
   >git push heroku master
 
-11. HerokuのWeb画面でPostgreSQLをProvisionする
+11. HerokuのWeb画面でPostgreSQLをProvisionする<br>
 該当アプリケーションのResources --> Add-onsでheroku postgres検索 --> Hobby Devを選択してProvisionをクリック
 
 12. データベースの接続情報は、HerokuのWe画面化
