@@ -6,7 +6,7 @@
   pip freezeを使う
 
 2. Procfileを作成
-  web: gunicorn app:server --log-file -
+  web: gunicorn app:server --log-file -<br>
 　--> 意味：HTTPサーバとしてgunicornを使う。app.pyのserverを起動する。
 
 3. アプリのフォルダに移動
@@ -64,8 +64,8 @@
   >bash>python) read_data()<br>
 
 16. Pythonとシェルを抜けローカルに舞い戻る
-  >bash>python) exit()
-  >bash> exit
+  >bash>python) exit()<br>
+  >bash> exit<br>
 
 17. Herokuをリスタートする
   >heroku restart
@@ -75,11 +75,11 @@
 
 
 データベースについて
-- ローカルではsqlite, HerokuではPostgresを使う。
-database.pyの以下の文が制御している。
-engine = create_engine(os.environ.get('DATABASE_URL') or 'sqlite:///' + databese_file, convert_unicode=True , echo=True)
---> 意味：エンジンとして環境変数のDATABASE_URLに指定されているものを使います。環境変数がなければ、sqlite://以下のURLにあるDBファイルを使います。
-         Herokuにいるときは前者、ローカルにいるときは後者が適用される
+- ローカルではsqlite, HerokuではPostgresを使う。<br>
+database.pyの以下の文が制御している。<br>
+engine = create_engine(os.environ.get('DATABASE_URL') or 'sqlite:///' + databese_file, convert_unicode=True , echo=True)<br>
+--> 意味：エンジンとして環境変数のDATABASE_URLに指定されているものを使います。環境変数がなければ、sqlite://以下のURLにあるDBファイルを使います。<br>
+         Herokuでは前者、ローカルでは後者が適用される
 
 - models.py
 SQLAlchemyで必要なファイル。テーブル定義を記述する。
