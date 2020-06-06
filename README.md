@@ -1,4 +1,4 @@
-### DashアプリをHeroku(+PostgreSQL)にデプロイする手順です。
+#### DashアプリをHeroku(+PostgreSQL)にデプロイする手順です。
 
 0. gitとHerokuのCLIをインストールし、Herokuにアカウントを作成しておく。<br>
    デプロイ用サンプルアプリを当レポジトリからcloneしておく。
@@ -75,7 +75,8 @@
   >heroku open
 
 
-データベースについて
+#### データベースについて
+
 - ローカルではsqlite, HerokuではPostgresを使う。<br>
 database.pyの以下の文が制御している。<br>
 engine = create_engine(os.environ.get('DATABASE_URL') or 'sqlite:///' + databese_file, convert_unicode=True , echo=True)<br>
