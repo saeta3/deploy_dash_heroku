@@ -1,7 +1,8 @@
 ### DashアプリをHeroku(+PostgreSQL)にデプロイする手順です。
 
 0. gitとHerokuのCLIをインストールし、Herokuにアカウントを作成しておく。
-
+   デプロイ用サンプルアプリを当レポジトリからcloneしておく。
+   
 1. requirement.txtを作成
   pip freezeを使う
 
