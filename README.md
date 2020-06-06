@@ -3,11 +3,11 @@
 0. gitとHerokuのCLIをインストールし、Herokuにアカウントを作成しておく。<br>
    デプロイ用サンプルアプリを当レポジトリからcloneしておく。
    
-1. requirement.txtを作成
+1. requirement.txtを作成<br>
   pip freezeを使う
 
 2. Procfileを作成
-  *web: gunicorn app:server --log-file -<br>*
+  *web: gunicorn app:server --log-file -*<br>
 　--> 意味：HTTPサーバとしてgunicornを使う。app.pyのserverを起動する。
 
 3. アプリのフォルダに移動
@@ -78,10 +78,10 @@
 #### データベースについて
 
 - ローカルではsqlite, HerokuではPostgresを使う。<br>
-database.pyの以下の文が制御している。<br>
+database.pyの以下の文が制御している。<br><br>
 *engine = create_engine(os.environ.get('DATABASE_URL') or 'sqlite:///' + databese_file, convert_unicode=True , echo=True)<br>*
---> 意味：エンジンとして環境変数のDATABASE_URLに指定されているものを使います。環境変数がなければ、sqlite://以下のURLにあるDBファイルを使います。<br>
-         Herokuでは前者、ローカルでは後者が適用される
+--> 意味：エンジンとして環境変数のDATABASE_URLに指定されているものを使います。環境変数がなければ、sqlite://以下のURLにあるDBファイルを使います。<br><br>
+         Herokuでは前者、ローカルでは後者が適用される<br>
 
 - models.py
 SQLAlchemyで必要なファイル。テーブル定義を記述する。
