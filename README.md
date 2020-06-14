@@ -17,7 +17,7 @@
   >git init
   --> dirして.gitができてたら成功
 
-5.herokuにログイン
+5.herokuにログイン ブラウザが開くのでそちらでログインする
   >heroku login
 
 6.herokuにアプリを作成
@@ -31,18 +31,18 @@
   >heroku buildpacks:set heroku/python
 
 9. gitをローカルでcommit
-  >git status
-  >git add .
-  >git commit -m "first commit"
-  >git status
+  >git status<br>
+  >git add .<br>
+  >git commit -m "first commit"<br>
+  >git status<br>
 
 10. データをherokuに送る
   >git push heroku master
 
 <ファイル変更時は>
-  >git add.
-  >git commit -m "added a line"
-  >git push heroku master
+  >git add.<br>
+  >git commit -m "added a line"<br>
+  >git push heroku master<br>
 
 11. HerokuのWeb画面でPostgreSQLをProvisionする<br>
 該当アプリケーションのResources --> Add-onsでheroku postgres検索 --> Hobby Devを選択してProvisionをクリック
